@@ -22,6 +22,7 @@ Node.js module.
   - [Performance](#performance)
   - [Compilation and the Runtime modules](#compilation-and-the-runtime-modules)
   - [Examples](#examples)
+  - [Community](#community)
 - [API](#api)
   - [Core](#core-module)
   - [Date module](#date-module)
@@ -96,15 +97,15 @@ We do NOT embed any i18n data within our library. However, we make it really eas
 
 ### Pick the modules you need
 
-| File                       | Minified + gzipped size | Runtime minified + gzipped size | Summary                                  |
-| -------------------------- | ----------------------: | ------------------------------: | ---------------------------------------- |
-| globalize.js               |                   1.5KB |                           1.0KB | [Core library](#core-module)             |
-| globalize/currency.js      |                   2.6KB |                           0.6KB | [Currency module](#currency-module) provides currency formatting |
-| globalize/date.js          |                   7.6KB |                           4.3KB | [Date module](#date-module) provides date formatting and parsing |
-| globalize/message.js       |                   5.4KB |                           0.7KB | [Message module](#message-module) provides ICU message format support |
-| globalize/number.js        |                   3.8KB |                           2.1KB | [Number module](#number-module) provides number formatting and parsing |
+| File                       | Minified + gzipped size | Runtime minified + gzipped size | Summary                                                      |
+| -------------------------- | ----------------------: | ------------------------------: | ------------------------------------------------------------ |
+| globalize.js               |                   1.5KB |                           1.0KB | [Core library](#core-module)                                 |
+| globalize/currency.js      |                   2.7KB |                           0.6KB | [Currency module](#currency-module) provides currency formatting |
+| globalize/date.js          |                   7.7KB |                           4.3KB | [Date module](#date-module) provides date formatting and parsing |
+| globalize/message.js       |                   5.3KB |                           0.7KB | [Message module](#message-module) provides ICU message format support |
+| globalize/number.js        |                   4.1KB |                           2.3KB | [Number module](#number-module) provides number formatting and parsing |
 | globalize/plural.js        |                   2.3KB |                           0.4KB | [Plural module](#plural-module) provides pluralization support |
-| globalize/relative-time.js |                   0.8KB |                           0.6KB | [Relative time module](#relative-time-module) provides relative time formatting support |
+| globalize/relative-time.js |                   0.8KB |                           0.5KB | [Relative time module](#relative-time-module) provides relative time formatting support |
 | globalize/unit.js          |                   0.9KB |                           0.6KB | [Unit module](#unit-module) provides unit formatting support |
 
 ### Browser Support
@@ -144,18 +145,21 @@ Read the [Locales section](#locales) for more information about supported locale
 
 ### Installation
 
-*By downloading a ZIP or a TAR.GZ...*
+#### Downloading a ZIP or tarball archive
 
-Click the github [releases tab](https://github.com/globalizejs/globalize/releases) and download the latest available Globalize package.
+Click the GitHub [releases tab](https://github.com/globalizejs/globalize/releases) and download the latest available Globalize package.
 
-*By using a package manager...*
+#### Using a package manager
 
-Use bower `bower install globalize`, or npm `npm install globalize`.
+You can use either npm or bower:
 
-*By using source files...*
+- `npm install globalize`
+- `bower install globalize`
 
-1. `git clone https://github.com/globalizejs/globalize.git`.
-2. [Build the distribution files](#build).
+#### Building from source
+
+1. `git clone https://github.com/globalizejs/globalize.git`
+2. [Build the distribution files](#build)
 
 ### Requirements
 
@@ -256,7 +260,7 @@ For information about the Globalize Compiler CLI or its JavaScript API, see the 
 The fastest and easiest way to use Globalize is by integrating it into your existing tools.
 
 - [Application example using webpack and npm](examples/app-npm-webpack/): easy to get started, automated CLDR loading and precompilation for production, but requires npm and webpack knowledge.
-- [Application example using globalize-express middleware with any express web app](https://github.com/devangnegandhi/globalize-express/tree/master/example): easy to incorporate globalize as a middleware within your express web add. (also checkout [globalize-express](https://github.com/devangnegandhi/globalize))
+- [Application example using globalize-express middleware with any express web app](https://github.com/devangnegandhi/globalize-express/tree/master/example): easy to incorporate globalize as a middleware within your Express web app. (also checkout [globalize-express](https://github.com/devangnegandhi/globalize))
 
 If you're using a different tool than the one above, but you're comfortable using JavaScript modules (such as ES6 modules, CommonJS, or AMD) and package managers like npm or bower, you may want to check out the following examples. Note you'll need to compile your code for production yourself.
 
@@ -269,6 +273,10 @@ If you're using a different tool than the one above, but you're comfortable usin
 If you're using none of the tools above, but instead you're using the plain and old script tags only, the following example may interest you. Note Globalize allows you to go low level like this. But, acknowledge that you'll need to handle dependencies and CLDR loading manually yourself.
 
 - [Basic example using plain JavaScript](examples/plain-javascript/): requires loading CLDR and handling dependencies manually.
+
+### Community
+
+You can find us on [Slack](https://globalizejs.slack.com/). If you're new, [join here](https://join.slack.com/t/globalizejs/shared_invite/zt-3tc3js1e-ETn09rNHL_5fclun8jtckQ).
 
 ## API
 

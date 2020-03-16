@@ -452,6 +452,28 @@ QUnit.test( "numbers should support significant digits in compact mode", functio
 		maximumSignificantDigits: 1,
 		minimumSignificantDigits: 1
 	})), "10K" );
+	assert.equal( format( -127350, properties( "0", en, {
+		compact: "short",
+		maximumSignificantDigits: 3,
+		minimumSignificantDigits: 1
+	})), "-127K" );
+	assert.equal( format( -127350000, properties( "0", en, {
+		compact: "short",
+		maximumSignificantDigits: 3,
+		minimumSignificantDigits: 1
+	})), "-127M" );
+
+	assert.equal( format( 12849872883, properties("0", en, {
+		minimumSignificantDigits: 1,
+		maximumSignificantDigits: 3,
+		compact: "short"
+	})), "12.8B" );
+	
+	assert.equal( format( 12850172883, properties("0", en, {
+		minimumSignificantDigits: 1,
+		maximumSignificantDigits: 3,
+		compact: "short"
+	})), "12.9B" );
 });
 
 QUnit.test( "numbers should support rounding in compact mode", function( assert ) {
